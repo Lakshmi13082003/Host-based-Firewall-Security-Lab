@@ -1,0 +1,176 @@
+🔹 Objective
+
+To configure and test basic firewall rules using Windows Defender Firewall with Advanced Security, allowing and blocking specific network ports to understand traffic filtering and firewall management.
+
+
+---
+
+🔹 Tools Used
+
+Windows Defender Firewall with Advanced Security
+
+Windows Operating System
+
+
+
+
+---
+
+🔹 Steps Performed
+
+✅ Step 1: Open Firewall Configuration Tool
+
+Opened Windows Defender Firewall with Advanced Security
+
+Navigated to Inbound Rules
+
+Viewed existing firewall rules
+
+
+
+---
+
+✅ Step 2: Add Rule to Block Telnet (Port 23)
+
+1. Clicked New Rule
+
+
+2. Selected Port
+
+
+3. Selected TCP
+
+
+4. Chose Specific Local Ports
+
+
+5. Entered: 23
+
+
+6. Selected Block the connection
+
+
+7. Applied rule to All Profiles
+
+
+8. Named rule: Block telnet port 23
+
+
+9. Clicked Finish
+
+
+
+✔ Rule successfully created and visible under Inbound Rules.
+
+
+---
+
+✅ Step 3: Add Rule to Allow SSH (Port 22)
+
+1. Clicked New Rule
+
+
+2. Selected Port
+
+
+3. Selected TCP
+
+
+4. Entered: 22
+
+
+5. Selected Allow the connection
+
+
+6. Applied to All Profiles
+
+
+7. Named rule: Allow SSH port 22
+
+
+8. Clicked Finish
+
+
+
+✔ SSH port 22 rule successfully added.
+
+
+---
+
+✅ Step 4: Verification
+
+Confirmed that:
+
+Port 23 was set to Block
+
+Port 22 was set to Allow
+
+
+Verified rule status under Inbound Rules panel.
+
+
+
+---
+
+✅ Step 5: Remove Test Rule
+
+Selected Block telnet port 23
+
+Clicked Delete
+
+Confirmed deletion
+
+
+✔ System restored to original state.
+
+
+---
+
+🔹 How Firewall Filters Traffic
+
+A firewall filters network traffic based on:
+
+Port number
+
+Protocol (TCP/UDP)
+
+Direction (Inbound/Outbound)
+
+Connection state
+
+Profile (Public/Private/Domain)
+
+
+When a packet attempts to enter or leave the system:
+
+1. Firewall checks rules.
+
+
+2. If a matching rule exists:
+
+Allow → Traffic passes
+
+Block → Traffic is dropped
+
+
+
+3. If no rule matches → Default policy applies.
+
+
+
+
+---
+
+🔹 Key Concepts Learned
+
+Firewall configuration
+
+Inbound vs Outbound rules
+
+Port-based filtering
+
+TCP vs UDP
+
+Blocking insecure services (Telnet)
+
+Allowing secure services (SSH)
